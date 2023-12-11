@@ -1,4 +1,4 @@
-sprite=Flashlight
+sprite=sprFlashlight
 visible=0
 solid=0
 persistent=0

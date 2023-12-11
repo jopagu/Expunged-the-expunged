@@ -42,74 +42,28 @@ applies_to=self
 
 draw_set_blend_mode(bm_subtract)
 
-
-light_start_x1 = x + (lengthdir_x(6, image_angle) * image_xscale)
-light_start_y1 = y - 1 + (lengthdir_y(6, image_angle) * image_xscale)
-light_top_x1 = x + (lengthdir_x(160, image_angle - 23) * image_xscale)
-light_top_y1 = y - 1 + (lengthdir_y(160, image_angle - 23) * image_xscale)
-light_bottom_x1 = x + (lengthdir_x(160, image_angle + 23) * image_xscale)
-light_bottom_y1 = y - 1+ (lengthdir_y(160, image_angle + 23) * image_xscale)
-
-light_c_x1 = x + (lengthdir_x(180, image_angle) * image_xscale)
-light_c_y1 = y - 1 + (lengthdir_y(180, image_angle) * image_xscale)
-
-light_start_x2 = x + (lengthdir_x(6, image_angle) * image_xscale)
-light_start_y2 = y - 1 + (lengthdir_y(6, image_angle) * image_xscale)
-light_top_x2 = x + (lengthdir_x(240, image_angle - 23) * image_xscale)
-light_top_y2 = y - 1 + (lengthdir_y(240, image_angle - 23) * image_xscale)
-light_bottom_x2 = x + (lengthdir_x(240, image_angle + 23) * image_xscale)
-light_bottom_y2 = y - 1+ (lengthdir_y(240, image_angle + 23) * image_xscale)
-
-light_c_x2 = x + (lengthdir_x(260, image_angle) * image_xscale)
-light_c_y2 = y - 1 + (lengthdir_y(260, image_angle) * image_xscale)
-
-draw_set_color(c_white)
-draw_set_alpha(0.2)
-
-draw_triangle(light_start_x1, light_start_y1, light_top_x1, light_top_y1,
-    light_bottom_x1, light_bottom_y1, false)
-
-draw_triangle(light_start_x2, light_start_y2, light_top_x2, light_top_y2,
-    light_bottom_x2, light_bottom_y2, false)
-
+draw_set_alpha(0.005)
+r = 240
+xx = x + (image_xscale * 6)
+yy = y - 1
+while(r > 0){
+    draw_circle(xx, yy, r, false)
+    r -= 2
+}
 
 draw_set_blend_mode(bm_add)
-draw_set_color(c_black)
 draw_set_alpha(1)
-draw_circle(light_c_x2, light_c_y2,
-    point_distance(light_c_x2, light_c_y2, light_top_x2, light_top_y2), false)
-
-
-draw_set_blend_mode(bm_subtract)
-draw_set_color(c_white)
-draw_set_alpha(0.2)
-draw_circle(light_c_x2, light_c_y2,
-    point_distance(light_c_x2, light_c_y2, light_top_x2, light_top_y2), false)
-
-draw_set_blend_mode(bm_add)
-draw_set_color(c_black)
-draw_set_alpha(1)
-draw_circle(light_c_x1, light_c_y1,
-    point_distance(light_c_x1, light_c_y1, light_top_x1, light_top_y1), false)
-
-
-draw_set_blend_mode(bm_subtract)
-draw_set_color(c_white)
-draw_set_alpha(0.2)
-draw_circle(light_c_x1, light_c_y1,
-    point_distance(light_c_x1, light_c_y1, light_top_x1, light_top_y1), false)
-
-draw_set_blend_mode(bm_subtract)
-draw_set_color(c_white)
-draw_set_alpha(0.2)
-draw_circle(light_c_x1, light_c_y1,
-    point_distance(light_c_x1, light_c_y1, light_top_x1, light_top_y1), false)
-
-
-
+draw_triangle(xx, yy, xx, yy - 320,
+    xx + (image_xscale * lengthdir_x(320, image_angle - 23)),
+    yy + (image_xscale * (lengthdir_y(320, image_angle + (image_xscale * 23)))), false)
+draw_triangle(xx, yy, xx, yy + 320,
+    xx + (image_xscale * lengthdir_x(320, image_angle + 23)),
+    yy + (image_xscale * (lengthdir_y(320, image_angle - (image_xscale * 23)))), false)
+draw_rectangle(xx, yy - 320, xx - (320 * image_xscale), yy + 320, false)
 
 draw_set_blend_mode(bm_normal)
 draw_set_color(c_black)
+draw_set_alpha(1)
 
 surface_set_target(application_surface)
 
