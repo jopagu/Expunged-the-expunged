@@ -100,7 +100,7 @@ ds_list_add(to_destroy, part)
 ds_list_add(part, fntTerminal)
 ds_list_add(part, light_green)
 ds_list_add(part, 5)
-ds_list_add(part, "Connecting to local server")
+ds_list_add(part, "Connecting to site server")
 
 ds_list_add(line, part)
 
@@ -148,10 +148,18 @@ if(cur_line < ds_list_size(lines)){
 
         if(_spd != 0 && cur_char < string_length(_str)){
             cur_char += 1
-            sound_play("sndType")
-            alarm[0] = _spd
+            if (cur_char < string_length(_str)){
+                sound_play("sndType")
+                alarm[0] = _spd
+            }
         }else{
             cur_part += 1
+            if (cur_part < ds_list_size(_line)){
+                sound_play("sndType")
+            }
+            _part = ds_list_find_value(_line, cur_part)
+            _spd = ds_list_find_value(_part, speedidx)
+            alarm[0] = _spd
             cur_char = 0
         }
 
