@@ -1,5 +1,4 @@
 |World
-|DarknessManager
 |Player
 +Common Objects
 	+Jtool Gimmicks
@@ -464,3 +463,6 @@
 	|VandalCherryBase
 +Equipment
 	|Flashlight
++Decor
+	|Terminal
+|DarknessManager

@@ -22,10 +22,13 @@ draw_set_color(c_black)
 draw_rectangle(0,0, 1023, 1023, false)
 
 with(Flashlight){
-    event_draw()
+    event_user(0)
 }
 
-surf = surface_set("darkness", 1024, 1024)
+with(Terminal){
+    event_user(0)
+}
+
 with(Player){
     draw_set_blend_mode(bm_subtract)
     draw_set_alpha(0.2)

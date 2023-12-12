@@ -48,13 +48,13 @@ if(instance_exists(Player)){
     image_angle *= Player.image_xscale
     image_xscale = Player.image_xscale
 }
-#define Draw_0
+#define Other_10
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
 applies_to=self
 */
-if on {
+if (on) {
 
     draw_set_blend_mode(bm_subtract)
 
@@ -67,21 +67,20 @@ if on {
         r -= 2
     }
 
-    draw_set_blend_mode(bm_add)
+
+    draw_set_blend_mode(bm_normal)
     draw_set_alpha(1)
-    draw_triangle(xx, yy, xx, yy - 320,
-        xx + (image_xscale * lengthdir_x(320, image_angle - 23)),
-        yy + (image_xscale * (lengthdir_y(320, image_angle + (image_xscale * 23)))), false)
-    draw_triangle(xx, yy, xx, yy + 320,
-        xx + (image_xscale * lengthdir_x(320, image_angle + 23)),
-        yy + (image_xscale * (lengthdir_y(320, image_angle - (image_xscale * 23)))), false)
-    draw_rectangle(xx, yy - 320, xx - (320 * image_xscale), yy + 320, false)
+    draw_set_color(c_black)
+    draw_triangle(xx, yy, xx, yy - 500,
+        xx + (image_xscale * lengthdir_x(500, image_angle - 23)),
+        yy + (image_xscale * (lengthdir_y(500, image_angle + (image_xscale * 23)))), false)
+    draw_triangle(xx, yy, xx, yy + 500,
+        xx + (image_xscale * lengthdir_x(500, image_angle + 23)),
+        yy + (image_xscale * (lengthdir_y(500, image_angle - (image_xscale * 23)))), false)
+    draw_rectangle(xx, yy - 500, xx - (500 * image_xscale), yy + 500, false)
 
     draw_set_blend_mode(bm_normal)
     draw_set_color(c_black)
     draw_set_alpha(1)
 
 }
-surface_set_target(application_surface)
-
-draw_self()
