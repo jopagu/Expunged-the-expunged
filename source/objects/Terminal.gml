@@ -7,12 +7,6 @@ applies_to=self
 image_speed = 0
 
 alarm[0] = 75
-
-cur_line = 0
-cur_char = 0
-
-lines = ds_list_create()
-ds_list_add(lines, "Loading SCiPnet v2.54...")
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -27,8 +21,9 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if(global.key_pressed[key_up] && !Player.frozen && !instance_exists(TerminalUI)){
+if(global.key_pressed[key_up] && !frozen && !instance_exists(TerminalUI)){
     instance_create(0, 0, TerminalUI)
+    frozen = true
 }
 #define Other_10
 /*"/*'/**//* YYD ACTION

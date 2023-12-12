@@ -14,7 +14,7 @@ applies_to=self
 if (instance_exists(Player)){
     if (Player.dead){
         instance_destroy()
-    }else if (global.key_pressed[key_item]){
+    }else if (global.key_pressed[key_item] && !frozen){
         if (on){
             on = false
             sound_play("sndSwitchOff")
