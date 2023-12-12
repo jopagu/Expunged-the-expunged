@@ -1,3 +1,10 @@
+#define Create_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+on = false
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -7,6 +14,14 @@ applies_to=self
 if (instance_exists(Player)){
     if (Player.dead){
         instance_destroy()
+    }else if (global.key_pressed[key_item]){
+        if (on){
+            on = false
+            sound_play("sndSwitchOff")
+        }else{
+            on = true
+            sound_play("sndSwitchOn")
+        }
     }
 }
 #define Step_2
@@ -39,32 +54,34 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if on {
 
-draw_set_blend_mode(bm_subtract)
+    draw_set_blend_mode(bm_subtract)
 
-draw_set_alpha(0.005)
-r = 240
-xx = x + (image_xscale * 6)
-yy = y - 1
-while(r > 0){
-    draw_circle(xx, yy, r, false)
-    r -= 2
+    draw_set_alpha(0.005)
+    r = 240
+    xx = x + (image_xscale * 6)
+    yy = y - 1
+    while(r > 0){
+        draw_circle(xx, yy, r, false)
+        r -= 2
+    }
+
+    draw_set_blend_mode(bm_add)
+    draw_set_alpha(1)
+    draw_triangle(xx, yy, xx, yy - 320,
+        xx + (image_xscale * lengthdir_x(320, image_angle - 23)),
+        yy + (image_xscale * (lengthdir_y(320, image_angle + (image_xscale * 23)))), false)
+    draw_triangle(xx, yy, xx, yy + 320,
+        xx + (image_xscale * lengthdir_x(320, image_angle + 23)),
+        yy + (image_xscale * (lengthdir_y(320, image_angle - (image_xscale * 23)))), false)
+    draw_rectangle(xx, yy - 320, xx - (320 * image_xscale), yy + 320, false)
+
+    draw_set_blend_mode(bm_normal)
+    draw_set_color(c_black)
+    draw_set_alpha(1)
+
 }
-
-draw_set_blend_mode(bm_add)
-draw_set_alpha(1)
-draw_triangle(xx, yy, xx, yy - 320,
-    xx + (image_xscale * lengthdir_x(320, image_angle - 23)),
-    yy + (image_xscale * (lengthdir_y(320, image_angle + (image_xscale * 23)))), false)
-draw_triangle(xx, yy, xx, yy + 320,
-    xx + (image_xscale * lengthdir_x(320, image_angle + 23)),
-    yy + (image_xscale * (lengthdir_y(320, image_angle - (image_xscale * 23)))), false)
-draw_rectangle(xx, yy - 320, xx - (320 * image_xscale), yy + 320, false)
-
-draw_set_blend_mode(bm_normal)
-draw_set_color(c_black)
-draw_set_alpha(1)
-
 surface_set_target(application_surface)
 
 draw_self()
