@@ -277,3 +277,4 @@ weapon_8dir
 
 player_update_sprite_coords
 simple_collision
+terminal_intro

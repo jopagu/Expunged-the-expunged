@@ -263,3 +263,5 @@
 	|shader_hueshift
 	|shader_tint
 	|shader_rainbow
++terminal
+	|terminal_intro
