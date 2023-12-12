@@ -417,6 +417,7 @@
 		|DefaultMenuBorderMaker
 		|RenexStarParticles
 		|TitleParticle
+		|TerminalUI
 	+Player
 		|BloodEmitter
 		|GibParticle

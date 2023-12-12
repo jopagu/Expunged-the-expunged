@@ -7,6 +7,12 @@ applies_to=self
 image_speed = 0
 
 alarm[0] = 75
+
+cur_line = 0
+cur_char = 0
+
+lines = ds_list_create()
+ds_list_add(lines, "Loading SCiPnet v2.54...")
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -15,6 +21,15 @@ applies_to=self
 */
 image_index = (image_index + 1) mod 2
 alarm[0] = 75
+#define Collision_Player
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+if(global.key_pressed[key_up] && !Player.frozen && !instance_exists(TerminalUI)){
+    instance_create(0, 0, TerminalUI)
+}
 #define Other_10
 /*"/*'/**//* YYD ACTION
 lib_id=1
