@@ -71,7 +71,8 @@ if (on) {
     }
 
 
-    draw_set_blend_mode(bm_normal)
+
+    draw_set_blend_mode_ext(bm_one, bm_zero)
     draw_set_alpha(darkness_level)
     draw_set_color(c_black)
     draw_triangle(xx, yy, xx, yy - 500,
@@ -81,6 +82,8 @@ if (on) {
         xx + (image_xscale * lengthdir_x(500, image_angle + 23)),
         yy + (image_xscale * (lengthdir_y(500, image_angle - (image_xscale * 23)))), false)
     draw_rectangle(xx, yy - 500, xx - (500 * image_xscale), yy + 500, false)
+
+
 
     draw_set_blend_mode(bm_normal)
     draw_set_color(c_black)

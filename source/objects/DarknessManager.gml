@@ -28,7 +28,7 @@ applies_to=self
 surf = surface_set("darkness", 1024, 1024)
 
 if(surface_is_new()){
-    draw_clear_alpha(c_black, 1)
+    draw_clear_alpha(c_black, 0)
 }
 
 draw_set_alpha(darkness_level)
@@ -39,18 +39,23 @@ with(Flashlight){
     event_user(0)
 }
 
-with(Terminal){
-    event_user(0)
-}
-
 with(Player){
     draw_set_blend_mode(bm_subtract)
-    draw_set_alpha(0.2)
+    draw_set_alpha(0.03)
     draw_set_color(c_white)
-    draw_circle(x, y, 13, false)
+    r = 20
+    xx = x
+    yy = y
+    while(r > 0){
+        draw_circle(xx, yy, r, false)
+        r -= 1
+    }
     draw_set_blend_mode(bm_normal)
-    draw_set_color(c_black)
     draw_set_alpha(1)
+}
+
+with(Terminal){
+    event_user(0)
 }
 
 surface_set_target(application_surface)
