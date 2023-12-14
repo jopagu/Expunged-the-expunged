@@ -1,3 +1,10 @@
+#define Create_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+darkness_level = 1
 #define Destroy_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -5,6 +12,13 @@ action_id=603
 applies_to=self
 */
 surface_discard("darkness")
+#define Other_4
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+//field darkness_level : number
 #define Draw_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -17,7 +31,7 @@ if(surface_is_new()){
     draw_clear_alpha(c_black, 1)
 }
 
-draw_set_alpha(1)
+draw_set_alpha(darkness_level)
 draw_set_color(c_black)
 draw_rectangle(0,0, 1023, 1023, false)
 

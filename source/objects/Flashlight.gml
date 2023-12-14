@@ -5,6 +5,7 @@ action_id=603
 applies_to=self
 */
 on = false
+darkness_level = 1
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -55,7 +56,9 @@ action_id=603
 applies_to=self
 */
 if (on) {
-
+    with(DarknessManager){
+        other.darkness_level = darkness_level
+    }
     draw_set_blend_mode(bm_subtract)
 
     draw_set_alpha(0.005)
@@ -69,7 +72,7 @@ if (on) {
 
 
     draw_set_blend_mode(bm_normal)
-    draw_set_alpha(1)
+    draw_set_alpha(darkness_level)
     draw_set_color(c_black)
     draw_triangle(xx, yy, xx, yy - 500,
         xx + (image_xscale * lengthdir_x(500, image_angle - 23)),
