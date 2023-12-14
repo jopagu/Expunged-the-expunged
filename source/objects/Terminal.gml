@@ -5,7 +5,7 @@ action_id=603
 applies_to=self
 */
 image_speed = 0
-
+arrow = noone
 alarm[0] = 75
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
@@ -15,6 +15,19 @@ applies_to=self
 */
 image_index = (image_index + 1) mod 2
 alarm[0] = 75
+#define Step_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+
+if(!place_meeting(x, y, Player)){
+    with(arrow){
+        instance_destroy()
+    }
+    arrow = noone
+}
 #define Collision_Player
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -24,6 +37,9 @@ applies_to=self
 if(global.key_pressed[key_up] && !frozen && !instance_exists(TerminalUI)){
     instance_create(0, 0, TerminalUI)
     frozen = true
+}
+if(!arrow){
+    arrow = instance_create(x + 24, y, UpArrow)
 }
 #define Other_10
 /*"/*'/**//* YYD ACTION

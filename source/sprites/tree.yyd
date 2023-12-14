@@ -393,3 +393,5 @@
 	|sprFlashlight
 +Decor
 	|sprTerminal
++Misc
+	|sprUpArrow

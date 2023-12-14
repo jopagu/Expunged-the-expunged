@@ -1,4 +1,5 @@
 |World
+|DarknessManager
 |Player
 +Common Objects
 	+Jtool Gimmicks
@@ -466,4 +467,5 @@
 	|Flashlight
 +Decor
 	|Terminal
-|DarknessManager
++Misc
+	|UpArrow
