@@ -277,4 +277,6 @@ weapon_8dir
 
 player_update_sprite_coords
 simple_collision
+terminal_intro_first
 terminal_intro
+key_to_str

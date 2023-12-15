@@ -45,6 +45,7 @@
 		|mmf_animspeed
 		|mmf_speed
 		|key_get_name
+		|key_to_str
 		|get_path_speed
 		|inside_view
 		|is_ingame
@@ -264,4 +265,5 @@
 	|shader_tint
 	|shader_rainbow
 +terminal
+	|terminal_intro_first
 	|terminal_intro

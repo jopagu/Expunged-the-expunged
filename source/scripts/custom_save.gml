@@ -8,5 +8,6 @@ with (Player) {
     savedata("vvvvvv",vvvvvv)
     savedata("beamstate",beamstate)
 }
+savedata("first_terminal", global.first_terminal)
 
 //add your custom save code here

@@ -8,5 +8,5 @@ with (Player) {
     vvvvvv=savedata("vvvvvv")
     beamstate=savedata("beamstate")
 }
-
+global.first_terminal = savedata("first_terminal")
 //add your custom load code here

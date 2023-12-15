@@ -468,5 +468,6 @@
 +Decor
 	|Terminal
 	|OverheadLight
+	|CardReader
 +Misc
 	|UpArrow

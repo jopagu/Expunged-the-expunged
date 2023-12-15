@@ -16,7 +16,25 @@ coloridx = 1
 speedidx = 2
 textidx = 3
 
-terminal_intro()
+input = ""
+
+blink = false
+alarm[1] = 25
+
+lines = ds_list_create()
+to_destroy = ds_list_create()
+
+ds_list_add(to_destroy, lines)
+
+if(global.first_terminal == true){
+    terminal_intro_first()
+    global.first_terminal = true
+}else{
+    terminal_intro()
+}
+
+input_line = noone
+
 
 
 event_alarm(0)
@@ -73,6 +91,64 @@ if(cur_line < ds_list_size(lines)){
 }
 if (alarm[0] <= 0){
     alarm[0] = 5
+}
+#define Alarm_1
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+blink = !blink
+alarm[1] = 25
+#define Step_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+if(keyboard_check_pressed(vk_anykey)){
+    key = keyboard_key
+    str = key_to_str(key)
+    input += str
+}
+
+
+
+input_line = ds_list_create()
+part = ds_list_create()
+
+ds_list_add(to_destroy, input_line)
+ds_list_add(to_destroy, part)
+
+ds_list_add(part, fntTerminalBold)
+ds_list_add(part, light_green)
+ds_list_add(part, 0)
+ds_list_add(part, "$>")
+
+ds_list_add(input_line, part)
+
+part = ds_list_create()
+
+ds_list_add(to_destroy, part)
+
+ds_list_add(part, fntTerminal)
+ds_list_add(part, light_green)
+ds_list_add(part, 5)
+ds_list_add(part, input)
+
+ds_list_add(input_line, part)
+
+if(blink){
+    part = ds_list_create()
+
+    ds_list_add(to_destroy, part)
+
+    ds_list_add(part, fntTerminal)
+    ds_list_add(part, light_green)
+    ds_list_add(part, 0)
+    ds_list_add(part, "_")
+
+    ds_list_add(input_line, part)
 }
 #define Draw_0
 /*"/*'/**//* YYD ACTION
@@ -145,8 +221,21 @@ if(cur_line < ds_list_size(lines)){
         draw_text(txt_x, txt_y, _str)
         txt_x += string_width(_str)
     }
-}
+}else{
+    txt_x = 132
 
+
+    for(j = 0; j < ds_list_size(input_line); j+= 1){
+        _part = ds_list_find_value(input_line, j)
+        _fnt = ds_list_find_value(_part, fontidx)
+        _clr = ds_list_find_value(_part, coloridx)
+        _str = ds_list_find_value(_part, textidx)
+        draw_set_font(_fnt)
+        draw_set_color(_clr)
+        draw_text(txt_x, txt_y, _str)
+        txt_x += string_width(_str)
+    }
+}
 
 surface_set_target(application_surface)
 camera_apply()
