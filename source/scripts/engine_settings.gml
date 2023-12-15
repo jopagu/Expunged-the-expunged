@@ -20,7 +20,7 @@
 */
 
 //game properties
-    global.game_title="renex engine"
+    global.game_title="I wanna [EXPUNGED] the [EXPUNGED]"
     //intended room speed
     //note: player always runs at 50hz! look in player step for an explanation
     global.game_speed=50

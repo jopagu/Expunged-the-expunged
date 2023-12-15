@@ -267,3 +267,4 @@
 +terminal
 	|terminal_intro_first
 	|terminal_intro
+	|terminal_check_input

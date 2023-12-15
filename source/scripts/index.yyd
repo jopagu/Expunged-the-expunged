@@ -280,3 +280,4 @@ simple_collision
 terminal_intro_first
 terminal_intro
 key_to_str
+terminal_check_input

@@ -26,7 +26,7 @@ to_destroy = ds_list_create()
 
 ds_list_add(to_destroy, lines)
 
-if(global.first_terminal == true){
+if(global.first_terminal == false){
     terminal_intro_first()
     global.first_terminal = true
 }else{
@@ -109,6 +109,7 @@ applies_to=self
 */
 if(cur_line >= ds_list_size(lines)){
     if(keyboard_check_pressed(vk_enter)){
+
         input_copy = ds_list_create()
         ds_list_add(to_destroy, input_copy)
 
@@ -133,6 +134,9 @@ if(cur_line >= ds_list_size(lines)){
         ds_list_add(input_copy, part)
 
         ds_list_add(lines, input_copy)
+
+        terminal_check_input()
+
         input = ""
         cur_line += 1
 

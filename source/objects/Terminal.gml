@@ -7,6 +7,8 @@ applies_to=self
 image_speed = 0
 arrow = noone
 alarm[0] = 75
+
+name=room_get_name(room)+"@"+string(round(x))+"x"+string(round(y))
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -35,7 +37,10 @@ action_id=603
 applies_to=self
 */
 if(global.key_pressed[key_up] && !frozen && !instance_exists(TerminalUI)){
-    instance_create(0, 0, TerminalUI)
+    with(instance_create(0, 0, TerminalUI)){
+        name = other.name
+    }
+
     frozen = true
 }
 if(!arrow){
