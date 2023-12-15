@@ -268,3 +268,8 @@
 	|terminal_intro_first
 	|terminal_intro
 	|terminal_check_input
+	|terminal_help
+	|terminal_unrecognized
+	|terminal_access
++SCPs
+	|scp173

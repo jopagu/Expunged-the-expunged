@@ -281,3 +281,7 @@ terminal_intro_first
 terminal_intro
 key_to_str
 terminal_check_input
+terminal_help
+terminal_unrecognized
+scp173
+terminal_access
