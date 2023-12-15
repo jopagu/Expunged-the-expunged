@@ -33,9 +33,10 @@ if(global.first_terminal == true){
     terminal_intro()
 }
 
-input_line = noone
-
-
+input_line = ds_list_create()
+input_part1 = ds_list_create()
+input_part2 = ds_list_create()
+input_part3 = ds_list_create()
 
 event_alarm(0)
 #define Destroy_0
@@ -107,7 +108,37 @@ action_id=603
 applies_to=self
 */
 if(cur_line >= ds_list_size(lines)){
-    if(keyboard_check_pressed(vk_anykey)){
+    if(keyboard_check_pressed(vk_enter)){
+        input_copy = ds_list_create()
+        ds_list_add(to_destroy, input_copy)
+
+        part = ds_list_create()
+
+        ds_list_add(to_destroy, part)
+
+        ds_list_add(part, fntTerminalBold)
+        ds_list_add(part, light_green)
+        ds_list_add(part, 0)
+        ds_list_add(part, "$>")
+        ds_list_add(input_copy, part)
+
+        part = ds_list_create()
+        ds_list_add(to_destroy, part)
+
+        ds_list_add(part, fntTerminal)
+        ds_list_add(part, light_green)
+        ds_list_add(part, 5)
+        ds_list_add(part, display_input)
+
+        ds_list_add(input_copy, part)
+
+        ds_list_add(lines, input_copy)
+        input = ""
+        cur_line += 1
+
+    }else if(keyboard_check_pressed(vk_backspace)){
+        input = string_copy(input, 0, string_length(input) - 1)
+    }else if(keyboard_check_pressed(vk_anykey)){
         key = keyboard_key
         str = key_to_str(key)
         input += str
@@ -121,40 +152,34 @@ if(i_l > 40){
 }
 
 input_line = ds_list_create()
-part = ds_list_create()
+input_part1 = ds_list_create()
 
-ds_list_add(to_destroy, input_line)
-ds_list_add(to_destroy, part)
+ds_list_add(input_part1, fntTerminalBold)
+ds_list_add(input_part1, light_green)
+ds_list_add(input_part1, 0)
+ds_list_add(input_part1, "$>")
 
-ds_list_add(part, fntTerminalBold)
-ds_list_add(part, light_green)
-ds_list_add(part, 0)
-ds_list_add(part, "$>")
+ds_list_add(input_line, input_part1)
 
-ds_list_add(input_line, part)
+input_part2 = ds_list_create()
 
-part = ds_list_create()
 
-ds_list_add(to_destroy, part)
+ds_list_add(input_part2, fntTerminal)
+ds_list_add(input_part2, light_green)
+ds_list_add(input_part2, 5)
+ds_list_add(input_part2, display_input)
 
-ds_list_add(part, fntTerminal)
-ds_list_add(part, light_green)
-ds_list_add(part, 5)
-ds_list_add(part, display_input)
+ds_list_add(input_line, input_part2)
 
-ds_list_add(input_line, part)
-
+input_part3 = ds_list_create()
 if(blink){
-    part = ds_list_create()
 
-    ds_list_add(to_destroy, part)
+    ds_list_add(input_part3, fntTerminal)
+    ds_list_add(input_part3, light_green)
+    ds_list_add(input_part3, 0)
+    ds_list_add(input_part3, "_")
 
-    ds_list_add(part, fntTerminal)
-    ds_list_add(part, light_green)
-    ds_list_add(part, 0)
-    ds_list_add(part, "_")
-
-    ds_list_add(input_line, part)
+    ds_list_add(input_line, input_part3)
 }
 #define Draw_0
 /*"/*'/**//* YYD ACTION
@@ -185,9 +210,9 @@ draw_set_color(c_black)
 draw_set_alpha(1)
 
 txt_x = 132
-txt_y = 460 - (16 * cur_line)
+txt_y = 460 - (16 * min(cur_line, 20))
 
-for(i = 0; i < cur_line; i+=1){
+for(i = max(0, cur_line - 20); i < cur_line; i+=1){
     _line = ds_list_find_value(lines, i)
     for(j = 0; j < ds_list_size(_line); j+= 1){
         _part = ds_list_find_value(_line, j)
@@ -242,6 +267,11 @@ if(cur_line < ds_list_size(lines)){
         txt_x += string_width(_str)
     }
 }
+
+ds_list_destroy(input_line)
+ds_list_destroy(input_part1)
+ds_list_destroy(input_part2)
+ds_list_destroy(input_part3)
 
 surface_set_target(application_surface)
 camera_apply()
