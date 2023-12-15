@@ -106,13 +106,19 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if(keyboard_check_pressed(vk_anykey)){
-    key = keyboard_key
-    str = key_to_str(key)
-    input += str
+if(cur_line >= ds_list_size(lines)){
+    if(keyboard_check_pressed(vk_anykey)){
+        key = keyboard_key
+        str = key_to_str(key)
+        input += str
+    }
 }
-
-
+i_l =string_length(input)
+if(i_l > 40){
+    display_input = string_copy(input, i_l - 40, 40)
+}else{
+    display_input = input
+}
 
 input_line = ds_list_create()
 part = ds_list_create()
@@ -134,7 +140,7 @@ ds_list_add(to_destroy, part)
 ds_list_add(part, fntTerminal)
 ds_list_add(part, light_green)
 ds_list_add(part, 5)
-ds_list_add(part, input)
+ds_list_add(part, display_input)
 
 ds_list_add(input_line, part)
 

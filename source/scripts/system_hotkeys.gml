@@ -1,7 +1,7 @@
 //most engine hotkeys are handled here
 
 //restart
-if (global.key_pressed[key_restart]) {
+if (global.key_pressed[key_restart] && !instance_exists(TerminalUI)) {
     if (is_ingame() && !global.pause) {
         if (room==global.difficulty_room) {
             Player.dead=1
@@ -15,7 +15,7 @@ if (global.key_pressed[key_restart]) {
 //pause
 if (is_ingame()) {
     if (pause_delay<=0) {
-        if (global.key_pressed[key_menu]) {
+        if (global.key_pressed[key_menu] && !instance_exists(TerminalUI)) {
             if (!global.pause) {
                 instance_create(0,0,PauseMenu)
             } else {
@@ -72,7 +72,7 @@ if (keyboard_check_pressed(vk_f2)) {
 }
 
 //toggle mute
-if (keyboard_check_pressed(ord("M"))) {
+if (keyboard_check_pressed(ord("M")) && !instance_exists(TerminalUI)) {
     var storevol;storevol=settings("stored mus vol")
     settings("stored mus vol",settings("musvol"))
     settings("musvol",storevol)

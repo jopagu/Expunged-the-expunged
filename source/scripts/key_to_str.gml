@@ -69,7 +69,7 @@ switch (argument0) {
     case 222: return "'";
     //other characters
     default:
-        if(keyboard_check(vk_shift)){
+        if(keyboard_check(vk_shift) || (argument0 >= 48 && argument0 <= 57)){
             return chr(argument0)
         }else{
             return chr(argument0 + 32)

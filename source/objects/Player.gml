@@ -463,7 +463,7 @@ if (!frozen) {
             if (global.disable_cancels && key_pressed[key_jump]) oneframe_buffer=1
             else player_capjump()
         }
-        if (key_pressed[key_die]) {
+        if (key_pressed[key_die] && !instance_exists(TerminalUI)) {
             kill_player()
         }
     }
