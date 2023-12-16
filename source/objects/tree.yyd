@@ -469,5 +469,6 @@
 	|Terminal
 	|OverheadLight
 	|CardReader
+	|Door
 +Misc
 	|UpArrow

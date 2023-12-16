@@ -395,5 +395,6 @@
 	|sprTerminal
 	|sprOverheadLight
 	|sprCardReader
+	|sprDoor
 +Misc
 	|sprUpArrow
