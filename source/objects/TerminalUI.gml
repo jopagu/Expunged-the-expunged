@@ -141,8 +141,10 @@ if(cur_line >= ds_list_size(lines)){
         cur_line += 1
 
     }else if(keyboard_check_pressed(vk_backspace)){
+        sound_play("sndType")
         input = string_copy(input, 0, string_length(input) - 1)
     }else if(keyboard_check_pressed(vk_anykey)){
+        sound_play("sndType")
         key = keyboard_key
         str = key_to_str(key)
         input += str

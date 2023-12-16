@@ -15,6 +15,9 @@ if(token2 == ""){
         case "help":
             terminal_help()
             break
+        case "list":
+            terminal_list()
+            break
         case "save":
             savedata_save(false, name)
 
@@ -41,6 +44,9 @@ if(token2 == ""){
     switch (token1){
         case "access":
             terminal_access(token2)
+            break
+        case "open":
+            terminal_open(token2)
             break
         default:
             terminal_unrecognized()

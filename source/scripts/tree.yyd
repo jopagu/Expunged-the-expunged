@@ -271,5 +271,7 @@
 	|terminal_help
 	|terminal_unrecognized
 	|terminal_access
+	|terminal_open
+	|terminal_list
 +SCPs
 	|scp173

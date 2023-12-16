@@ -148,7 +148,7 @@ ds_list_add(to_destroy, part)
 ds_list_add(part, fntTerminalBold)
 ds_list_add(part, light_green)
 ds_list_add(part, 5)
-ds_list_add(part, "Description:")
+ds_list_add(part, "Description: ")
 
 ds_list_add(line, part)
 

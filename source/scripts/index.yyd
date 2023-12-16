@@ -285,3 +285,5 @@ terminal_help
 terminal_unrecognized
 scp173
 terminal_access
+terminal_open
+terminal_list
