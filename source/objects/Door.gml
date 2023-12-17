@@ -36,11 +36,17 @@ if(!place_meeting(x, y, Player)){
     }
     arrow = noone
 }
+if(image_index != 0){
+    with(Player){
+        hspeed = 0
+    }
+}
 if(fading){
     with(Player){
         image_alpha -= 0.02
         if(image_alpha <= 0){
             cutscene = false
+            unlock_controls()
             warp_to(other.roomTo)
 
 
@@ -58,10 +64,14 @@ if(global.key_pressed[key_up] && !frozen && !cutscene){
     image_index = 1
     sound_play("sndDoorSqueak")
     cutscene = true
+    lock_controls()
+    with(Player){
+        hspeed = 0
+    }
 }
 
 if(!arrow){
-    arrow = instance_create(x + 24, y - 16, UpArrow)
+    arrow = instance_create(x + (24 * image_xscale), y - 16, UpArrow)
 }
 #define Other_4
 /*"/*'/**//* YYD ACTION
