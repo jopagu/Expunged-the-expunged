@@ -478,3 +478,5 @@
 	|TurretBase
 	|TurretBarrel
 	|TurretBullet
++Creatures
+	|SCP-173

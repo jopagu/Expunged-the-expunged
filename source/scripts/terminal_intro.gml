@@ -43,7 +43,7 @@ ds_list_add(to_destroy, part)
 ds_list_add(part, fntTerminal)
 ds_list_add(part, c_red)
 ds_list_add(part, 5)
-ds_list_add(part, "0")
+ds_list_add(part, string(global.clearance))
 
 ds_list_add(line, part)
 ds_list_add(lines, line)

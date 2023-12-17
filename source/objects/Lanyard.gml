@@ -30,7 +30,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-//field clearance : string
+//field clearance : number
 
 if (global.clearance == clearance){
     instance_destroy()
