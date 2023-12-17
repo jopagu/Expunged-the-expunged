@@ -123,6 +123,7 @@
 	|sprM9
 	|sprM9Trigger
 	|sprAligner
+	|sprCrate
 +Player
 	|sprMaskPlayer
 	|sprMaskPlayerFlip
