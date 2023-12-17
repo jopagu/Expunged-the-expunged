@@ -9,5 +9,6 @@ with (Player) {
     beamstate=savedata("beamstate")
 }
 global.first_terminal = savedata("first_terminal")
+global.clearance = savedata("clearance")
 ds_list_read(global.unlocked_scps, savedata("unlocked_scps"))
 //add your custom load code here

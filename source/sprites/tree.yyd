@@ -399,6 +399,7 @@
 	|sprDoor
 +Misc
 	|sprUpArrow
+	|sprLanyard
 +Folders
 	|sprManillaFolder
 +Obstacles
