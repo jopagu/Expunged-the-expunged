@@ -401,3 +401,6 @@
 	|sprUpArrow
 +Folders
 	|sprManillaFolder
++Obstacles
+	|TurretBase
+	|TurretBarrel

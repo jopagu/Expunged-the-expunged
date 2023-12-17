@@ -473,3 +473,6 @@
 +Misc
 	|UpArrow
 	|Folder
++Obstacles
+	|TurretBase
+	|TurretBarrel
