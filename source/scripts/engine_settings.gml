@@ -204,7 +204,7 @@
     //2 - pause the level music immediately
     //3 - do nothing (music keeps playing)
     //4 - music slowdown
-    global.gameover_music=0
+    global.gameover_music=3
     //block break sound:
     //0 - remastered sound effect
     //1 - yuuutu engine sound effect

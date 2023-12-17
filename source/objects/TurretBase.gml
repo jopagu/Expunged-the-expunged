@@ -16,3 +16,10 @@ with(turret){
     x = other.x + 23
     y = other.y + 10
 }
+#define Trigger_Trap is Triggered
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+on = !on
