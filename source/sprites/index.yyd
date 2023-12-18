@@ -376,8 +376,13 @@ sprCardReader
 sprDoor
 sprManillaFolder
 sprCrate
-TurretBase
-TurretBarrel
-TurretBullet
+sprTurretBase
+sprTurretBarrel
+sprTurretBullet
 sprLanyard
 spr173
+sprCrowbar
+sprVentCoverH
+sprVentCoverV
+sprVentCoverLD
+VentGrate

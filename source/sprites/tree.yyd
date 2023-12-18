@@ -392,19 +392,24 @@
 	|sprMikuLeek
 +Equipment
 	|sprFlashlight
+	|sprCrowbar
 +Decor
 	|sprTerminal
 	|sprOverheadLight
 	|sprCardReader
 	|sprDoor
+	|sprVentCoverH
+	|sprVentCoverV
+	|sprVentCoverLD
+	|VentGrate
 +Misc
 	|sprUpArrow
 	|sprLanyard
 +Folders
 	|sprManillaFolder
 +Obstacles
-	|TurretBase
-	|TurretBarrel
-	|TurretBullet
+	|sprTurretBase
+	|sprTurretBarrel
+	|sprTurretBullet
 +Creatures
 	|spr173

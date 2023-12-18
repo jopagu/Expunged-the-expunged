@@ -464,12 +464,18 @@
 	|SuperVehicle
 	|VandalCherryBase
 +Equipment
+	|EquipmentManager
 	|Flashlight
+	|Crowbar
 +Decor
 	|Terminal
 	|OverheadLight
 	|CardReader
 	|Door
+	|VentCoverH
+	|VentCoverV
+	|VentCoverLD
+	|VentGrate
 +Misc
 	|UpArrow
 	|Folder

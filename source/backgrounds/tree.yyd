@@ -5,6 +5,7 @@
 |tile_corner
 |tile_scp
 |tile_wire
+|tile_vent
 |bgGameMakerBlock
 +IWBTG
 	|bgMegaman
