@@ -15,7 +15,7 @@ applies_to=self
 */
 if(distance_to_object(Player) <= 32){
 
-    if(global.key_pressed[key_item] && !frozen && instance_exists(Crowbar)){
+    if(global.key_pressed[key_item] && !frozen && instance_exists(Crowbar) && !spinning){
         sound_play("sndMetalClang")
         solid = false
         spinning = true
@@ -23,15 +23,7 @@ if(distance_to_object(Player) <= 32){
         hspeed = lengthdir_x(3, dir)
         vspeed = lengthdir_y(3, dir)
         if(name == ""){
-            with(VentCoverH){
-                instance_destroy()
-            }
-            with(VentCoverV){
-                instance_destroy()
-            }
-            with(VentCoverLD){
-                instance_destroy()
-            }
+            destroy_vent_covers()
         }
     }
 }

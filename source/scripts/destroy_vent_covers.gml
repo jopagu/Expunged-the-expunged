@@ -1,0 +1,9 @@
+with(VentCoverH){
+    instance_destroy()
+}
+with(VentCoverV){
+    instance_destroy()
+}
+with(VentCoverLD){
+    instance_destroy()
+}

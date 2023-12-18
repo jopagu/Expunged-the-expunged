@@ -401,7 +401,7 @@
 	|sprVentCoverH
 	|sprVentCoverV
 	|sprVentCoverLD
-	|VentGrate
+	|sprVentGrate
 	|sprBed
 +Misc
 	|sprUpArrow

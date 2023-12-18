@@ -195,6 +195,10 @@ applies_to=self
 */
 surf = surface_set("terminal", 1024, 1024)
 
+if(surface_is_new()){
+    draw_clear_alpha(c_black, 0)
+}
+
 draw_set_color(c_black)
 draw_set_alpha(0.75)
 
