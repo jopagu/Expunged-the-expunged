@@ -63,8 +63,8 @@ if (on) {
 
     draw_set_alpha(0.005)
     r = 240
-    xx = x + (image_xscale * 6)
-    yy = y - 1
+    xx = x + (image_xscale * 6) - view_xview
+    yy = y - 1 - view_yview
     while(r > 0){
         draw_circle(xx, yy, r, false)
         r -= 2

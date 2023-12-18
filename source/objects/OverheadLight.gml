@@ -21,8 +21,8 @@ applies_to=self
 draw_set_alpha(0.002)
 draw_set_color(c_black)
 
-xx = x + 3
-yy = y + 21
+xx = x + 3 - view_xview
+yy = y + 21 - view_yview
 draw_set_blend_mode(bm_subtract)
 
 c = 0

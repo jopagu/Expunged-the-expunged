@@ -1,3 +1,3 @@
 //gm82 fields begin
-roomTo=rmHub
+warpid="vent"
 //gm82 fields end

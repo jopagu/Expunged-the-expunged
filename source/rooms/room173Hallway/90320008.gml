@@ -1,3 +1,3 @@
 //gm82 fields begin
-length=128
+length=96
 //gm82 fields end

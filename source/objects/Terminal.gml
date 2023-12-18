@@ -44,7 +44,7 @@ if(global.key_pressed[key_up] && !frozen && !instance_exists(TerminalUI)){
     frozen = true
 }
 if(!arrow){
-    arrow = instance_create(x + 24, y, UpArrow)
+    arrow = instance_create(x + (24 * image_xscale), y, UpArrow)
 }
 #define Other_10
 /*"/*'/**//* YYD ACTION
@@ -58,8 +58,8 @@ if(image_index == 1){
     draw_set_alpha(0.03)
     draw_set_color(c_black)
     r = 48
-    xx = x + 24
-    yy = y + 20
+    xx = x + (24 * image_xscale) - view_xview
+    yy = y + 20 - view_yview
     draw_set_blend_mode(bm_subtract)
     while(r > 0){
         draw_circle(xx, yy, r, false)
