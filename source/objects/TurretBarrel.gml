@@ -25,7 +25,8 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if((abs(angle_difference(direction_to_object(Player), image_angle)) <= 20)  && distance_to_object(Player) <= 240){
+if((abs(angle_difference(direction_to_object(Player), image_angle)) <= 20)  && distance_to_object(Player) <= 240
+    && !collision_line(x + lengthdir_x(30, image_angle), y + lengthdir_y(30, image_angle), Player.x, Player.y, Block, true, false)){
     if !tracking{
         tracking = true
         alarm[0] = 7
