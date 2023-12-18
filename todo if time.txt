@@ -3,3 +3,7 @@ fix # display in terminal
 big crate sprite
 random posters and blood splatters etc.
 fade out tiles
+2718 
+3125 
+033
+055
