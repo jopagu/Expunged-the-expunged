@@ -8,6 +8,7 @@ image_speed = 0
 arrow = noone
 fading = false
 roomTo = room
+warpid=""
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -47,6 +48,8 @@ if(fading){
         if(image_alpha <= 0){
             cutscene = false
             unlock_controls()
+            global.warp_id = other.warpid
+
             warp_to(other.roomTo)
 
 
@@ -80,3 +83,4 @@ action_id=603
 applies_to=self
 */
 //field roomTo: room
+//field warpid: string
