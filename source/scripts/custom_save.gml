@@ -11,5 +11,5 @@ with (Player) {
 savedata("first_terminal", global.first_terminal)
 savedata("clearance", global.clearance)
 savedata("unlocked_scps", ds_list_write(global.unlocked_scps))
-
+savedata("old_man_active", global.old_man_active)
 //add your custom save code here

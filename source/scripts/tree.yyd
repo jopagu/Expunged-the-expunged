@@ -275,4 +275,5 @@
 	|terminal_list
 +SCPs
 	|scp173
+	|scp106
 |destroy_vent_covers

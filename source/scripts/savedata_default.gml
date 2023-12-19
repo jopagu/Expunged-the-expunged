@@ -16,6 +16,7 @@ savedatap("obj",Player)
 
 global.first_terminal = false
 global.clearance = 0
+global.old_man_active = false
 global.unlocked_scps = ds_list_create()
 ds_list_add(global.unlocked_scps, "173")
 ds_list_add(global.unlocked_scps, "999")

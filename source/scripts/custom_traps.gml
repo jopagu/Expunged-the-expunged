@@ -2,3 +2,6 @@
 //receive a Trap is Triggered event when activated by engine triggers
 
 add_gizmo(Gizmo)
+add_gizmo(TurretBase)
+add_gizmo(TurretBarrel)
+add_gizmo(SCP106Emerge)

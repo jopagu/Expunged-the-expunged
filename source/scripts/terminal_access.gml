@@ -4,6 +4,9 @@ switch num{
     case "173":
         scp173()
         break
+    case "106":
+        scp106()
+        break
     default:
         line = ds_list_create()
         part = ds_list_create()
