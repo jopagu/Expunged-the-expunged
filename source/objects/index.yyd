@@ -456,7 +456,7 @@ TurretBase
 TurretBarrel
 TurretBullet
 Lanyard
-SCP-173
+SCP173
 Crowbar
 EquipmentManager
 VentCoverH
@@ -464,4 +464,5 @@ VentCoverV
 VentCoverLD
 VentGrate
 Bed
-SCP-106Emerge
+SCP106Emerge
+SCP106
