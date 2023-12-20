@@ -5,6 +5,13 @@ action_id=603
 applies_to=self
 */
 image_speed = 1/15
+#define Destroy_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+global.old_man_active = false
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -19,4 +26,13 @@ if(!Player.dead){
         image_xscale = -1
         hspeed = 1
     }
+}
+#define Collision_Player
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+if(Player.image_alpha >= 0.7){
+    kill_player()
 }

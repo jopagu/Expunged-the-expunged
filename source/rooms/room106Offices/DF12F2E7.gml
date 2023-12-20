@@ -1,4 +1,3 @@
 //gm82 fields begin
-length=96
-on=false
+trigger=Trigger2
 //gm82 fields end

@@ -1,4 +1,3 @@
 //gm82 fields begin
-length=96
-on=false
+name="door2"
 //gm82 fields end

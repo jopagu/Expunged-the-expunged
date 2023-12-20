@@ -48,10 +48,10 @@ if(fading){
         if(image_alpha <= 0){
             cutscene = false
             unlock_controls()
-            global.warp_id = other.warpid
+
 
             warp_to(other.roomTo)
-
+            global.warp_id = other.warpid
 
         }
     }

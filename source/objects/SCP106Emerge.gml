@@ -4,8 +4,9 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-
+image_speed = 0
 visible = false
+name = ""
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -32,7 +33,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if(image_index < 4){
+if(image_index < 4 && visible){
     kill_player()
 }
 #define Other_4
@@ -41,7 +42,9 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if(global.old_man_active){
+//field name: string
+
+if(global.old_man_active && (name == "" || name == global.warp_id)){
     visible = true
     image_speed = 1/35
     alarm[0] = 106

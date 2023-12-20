@@ -1,4 +1,4 @@
 //gm82 fields begin
-length=96
-on=false
+roomTo=room106Hallway
+warpid="door3"
 //gm82 fields end

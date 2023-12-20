@@ -5,6 +5,7 @@ action_id=603
 applies_to=self
 */
 length = 192
+on = true
 #define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -12,12 +13,15 @@ action_id=603
 applies_to=self
 */
 //field length: number
+//field on: boolean
 #define Other_10
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
 applies_to=self
 */
+if !on exit
+
 draw_set_alpha(0.002)
 draw_set_color(c_black)
 
@@ -54,3 +58,11 @@ while(c <= length div 2){
 draw_set_blend_mode(bm_normal)
 draw_set_color(c_black)
 draw_set_alpha(1)
+#define Trigger_Trap is Triggered
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+on = !on
+sound_play("sndLightSwitch")

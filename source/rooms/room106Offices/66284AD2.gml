@@ -1,4 +1,3 @@
 //gm82 fields begin
-length=96
-on=false
+clearance=1
 //gm82 fields end

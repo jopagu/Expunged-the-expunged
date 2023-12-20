@@ -41,7 +41,7 @@ with (mytrig)
     if (group==instance_place(x,y,TriggerGroup))
         if (x>=l && x<r && y>=t && y<b)
             if (!instance_place(x,y,TriggerLock))
-                instance_destroy()
+                event_user(0)
 
 //don't destroy button triggers!
 if (!object_is_child_of(Button))
