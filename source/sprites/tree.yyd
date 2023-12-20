@@ -404,6 +404,8 @@
 	|sprVentGrate
 	|sprBed
 	|sprDesk
+	|sprSecurityGate
+	|sprButton
 +Misc
 	|sprUpArrow
 	|sprLanyard

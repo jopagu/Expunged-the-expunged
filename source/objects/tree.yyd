@@ -478,6 +478,8 @@
 	|VentGrate
 	|Bed
 	|Desk
+	|SecurityGate
+	|WallButton
 +Misc
 	|UpArrow
 	|Folder
