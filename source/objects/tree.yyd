@@ -482,10 +482,12 @@
 	|Desk
 	|SecurityGate
 	|WallButton
+	|Pedestal
 +Misc
 	|UpArrow
 	|Folder
 	|Lanyard
+	|113
 +Obstacles
 	|TurretBase
 	|TurretBarrel

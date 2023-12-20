@@ -407,9 +407,11 @@
 	|sprDesk
 	|sprSecurityGate
 	|sprButton
+	|sprPedestal
 +Misc
 	|sprUpArrow
 	|sprLanyard
+	|spr113
 +Folders
 	|sprManillaFolder
 +Obstacles
