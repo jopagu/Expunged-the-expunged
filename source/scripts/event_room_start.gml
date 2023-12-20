@@ -60,3 +60,7 @@ if (global.onload_trigger) {
     global.onload_trigger=false
     with (all) event_perform(ev_trigger,tr_onload)
 }
+
+if(global.crowbar){
+    instance_create(0, 0, Crowbar)
+}

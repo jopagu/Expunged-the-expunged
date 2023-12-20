@@ -467,6 +467,8 @@
 	|EquipmentManager
 	|Flashlight
 	|Crowbar
+	|CrowbarPickup
+	|CrowbarSpawn
 +Decor
 	|Terminal
 	|OverheadLight

@@ -14,6 +14,7 @@ applies_to=self
 */
 global.old_man_active = false
 global.old_man_dead = true
+instance_create(x, y, CrowbarPickup)
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1

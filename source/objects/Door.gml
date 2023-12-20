@@ -55,6 +55,12 @@ if(fading){
 
         }
     }
+    with(Crowbar){
+        image_alpha -= 0.02
+    }
+    with(Flashlight){
+        image_alpha -= 0.02
+    }
 }
 #define Collision_Player
 /*"/*'/**//* YYD ACTION

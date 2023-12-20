@@ -393,6 +393,7 @@
 +Equipment
 	|sprFlashlight
 	|sprCrowbar
+	|sprCrowbarBig
 +Decor
 	|sprTerminal
 	|sprOverheadLight

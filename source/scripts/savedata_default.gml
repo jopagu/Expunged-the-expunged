@@ -20,6 +20,7 @@ global.old_man_active = false
 global.old_man_dead = false
 global.first_door = false
 global.unlocked_scps = ds_list_create()
+global.crowbar = false
 ds_list_add(global.unlocked_scps, "173")
 ds_list_add(global.unlocked_scps, "999")
 savedatap("unlocked_scps", ds_list_write(global.unlocked_scps))
