@@ -8,6 +8,13 @@ image_speed = 0
 clearance = 0
 trigger = noone
 arrow = noone
+#define Alarm_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+image_index = 0
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -26,9 +33,18 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if(global.key_pressed[key_up] && !frozen && !cutscene && global.clearance >= clearance){
-    with(instance_create(x,y, trigger)){
-        event_user(0)
+if(global.key_pressed[key_up] && !frozen && !cutscene){
+    if(global.clearance >= clearance){
+        sound_play("sndCorrect")
+        image_index = 2
+        alarm[0] = 50
+        with(instance_create(x,y, trigger)){
+            event_user(0)
+        }
+    }else{
+        sound_play("sndIncorrect")
+        image_index = 1
+        alarm[0] = 50
     }
 }
 

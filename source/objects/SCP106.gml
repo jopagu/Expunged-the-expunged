@@ -5,6 +5,7 @@ action_id=603
 applies_to=self
 */
 image_speed = 1/15
+alive = true
 #define Destroy_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -19,7 +20,12 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if(!Player.dead){
+if(!alive){
+    image_alpha -= 0.02
+    if(image_alpha == 0){
+        instance_destroy()
+    }
+}else if(!Player.dead){
     if(Player.x <= x){
         image_xscale = 1
         hspeed = -1
@@ -34,6 +40,15 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if(Player.image_alpha >= 0.7){
+if(Player.image_alpha >= 0.7 && alive){
     kill_player()
 }
+#define Other_10
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+alive = false
+image_speed = 0
+hspeed = 0

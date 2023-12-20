@@ -51,6 +51,7 @@ if(global.old_man_active && (name == "" || name == global.warp_id)){
     visible = true
     image_speed = 1/35
     alarm[0] = 106
+    sound_play("sndSwoosh")
 }
 #define Trigger_Trap is Triggered
 /*"/*'/**//* YYD ACTION
@@ -62,3 +63,4 @@ visible = true
 image_speed = 1/35
 alarm[0] = 106
 global.old_man_active = true
+sound_play("sndSwoosh")
