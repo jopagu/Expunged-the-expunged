@@ -32,6 +32,8 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if(image_index != 0) exit
+
 image_speed = 1/30
 sound_play("sndMechDoor")
 

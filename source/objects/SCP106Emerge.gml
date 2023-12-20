@@ -7,6 +7,9 @@ applies_to=self
 image_speed = 0
 visible = false
 name = ""
+if(global.old_man_dead){
+    instance_destroy()
+}
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1

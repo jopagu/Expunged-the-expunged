@@ -12,6 +12,7 @@ action_id=603
 applies_to=self
 */
 global.old_man_active = false
+global.old_man_dead = true
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
