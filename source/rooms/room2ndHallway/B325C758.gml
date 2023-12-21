@@ -1,5 +1,5 @@
 //gm82 fields begin
-roomTo=room2ndHallway
+roomTo=room1
 warpid="vent"
-visible=false
 //gm82 fields end
+visible=false
