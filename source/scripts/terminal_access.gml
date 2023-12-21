@@ -10,6 +10,15 @@ switch num{
     case "113":
         scp113()
         break
+    case "033":
+        scp033()
+        break
+    case "33":
+        scp033()
+        break
+    case "1313":
+        scp1313()
+        break
     default:
         line = ds_list_create()
         part = ds_list_create()
