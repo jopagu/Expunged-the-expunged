@@ -7,6 +7,9 @@ switch num{
     case "106":
         url_open("https://scp-wiki.wikidot.com/scp-106")
         break
+    case "113":
+        url_open("https://scp-wiki.wikidot.com/scp-113")
+        break
     default:
         line = ds_list_create()
         part = ds_list_create()
