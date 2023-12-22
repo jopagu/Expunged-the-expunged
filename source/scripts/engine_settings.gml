@@ -28,7 +28,7 @@
     global.width=800
     global.height=608
     //first room that's actually part of the game
-    global.first_room=rmHub
+    global.first_room=room1
     //room to return to when using WarpToHub object
     global.hub_room=rmHub
     //password for encrypting saves

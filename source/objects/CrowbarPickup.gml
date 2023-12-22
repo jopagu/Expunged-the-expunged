@@ -24,3 +24,6 @@ global.crowbar = true
 sound_play("sndItem")
 instance_destroy()
 instance_create(x, y, Crowbar)
+with(instance_create(x,y, PlayerText)){
+    text = "Found crowbar. Press " + key_get_name(key_item) + " to use"
+}

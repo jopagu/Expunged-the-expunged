@@ -41,10 +41,17 @@ if(global.key_pressed[key_up] && !frozen && !cutscene){
         with(instance_create(x,y, trigger)){
             event_user(0)
         }
+        with(instance_create(x, y, PlayerText)){
+            text = "Credentials accepted"
+        }
     }else{
         sound_play("sndIncorrect")
         image_index = 1
         alarm[0] = 50
+        with(instance_create(x, y, PlayerText)){
+            color = c_red
+            text = "Clearance level " + string(other.clearance) + " required"
+        }
     }
 }
 
