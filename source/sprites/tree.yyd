@@ -409,6 +409,8 @@
 	|sprButton
 	|sprPedestal
 	|sprBearMath
+	|sprStairs
+	|sprStairPlatform
 +Misc
 	|sprUpArrow
 	|sprLanyard

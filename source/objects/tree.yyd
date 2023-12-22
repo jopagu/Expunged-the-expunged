@@ -484,6 +484,8 @@
 	|WallButton
 	|Pedestal
 	|BearMath
+	|Stairs
+	|StairPlatform
 +Misc
 	|UpArrow
 	|Folder
