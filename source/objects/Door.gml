@@ -48,7 +48,9 @@ if(fading){
         if(image_alpha <= 0){
             cutscene = false
             unlock_controls()
-
+            if(other.roomTo == room2ndHallway && other.warpid == "door2"){
+                savedatap("time", savedatap("time") + 3000)
+            }
 
             warp_to(other.roomTo)
             global.warp_id = other.warpid

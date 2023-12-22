@@ -25,6 +25,9 @@ if(ds_list_find_index(global.unlocked_scps, object) == -1){
     ds_list_add(global.unlocked_scps, object)
 }
 sound_play("sndItem")
+with(instance_create(x, y, PlayerText)){
+    text = "File unlocked: SCP-" + other.object
+}
 instance_destroy()
 #define Other_4
 /*"/*'/**//* YYD ACTION
