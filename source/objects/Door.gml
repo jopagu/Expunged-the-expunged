@@ -50,6 +50,13 @@ if(fading){
             unlock_controls()
             if(other.roomTo == room2ndHallway && other.warpid == "door2"){
                 savedatap("time", savedatap("time") + 3000)
+                if(ds_list_find_index(global.unlocked_scps, "055") == -1){
+                    ds_list_add(global.unlocked_scps, "055")
+                    with(instance_create(x, y, PlayerText)){
+                        text = "File unlocked: SCP-055"
+                    }
+                }
+
             }
 
             warp_to(other.roomTo)
