@@ -486,7 +486,10 @@
 	|BearMath
 	|Stairs
 	|StairPlatform
+	|StairPlatformSegment
 	|RedLight
+	|Shelf
+	|LongShelf
 +Misc
 	|UpArrow
 	|Folder

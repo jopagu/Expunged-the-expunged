@@ -411,7 +411,10 @@
 	|sprBearMath
 	|sprStairs
 	|sprStairPlatform
+	|sprStairPlatformSegment
 	|sprRedLight
+	|sprShelf
+	|sprLongShelf
 +Misc
 	|sprUpArrow
 	|sprLanyard

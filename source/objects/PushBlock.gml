@@ -21,13 +21,19 @@ applies_to=self
 */
 with (Player) other.grav=vflip
 
-if (place_free(x,y+grav)) {
+with(Platform){
+    solid = true
+}
+if (place_free(x,y+grav)){
     vspeed=fall_speed*grav
     hspeed=0
 } else if (vspeed!=0) {
     move_outside_solid(direction+180,speed)
     move_contact_solid(direction,speed)
     vspeed=0
+}
+with(Platform){
+    solid = false
 }
 
 with (ConveyorLeft)
