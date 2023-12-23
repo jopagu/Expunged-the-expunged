@@ -64,6 +64,10 @@ with(OverheadLight){
     event_user(0)
 }
 
+with(RedLight){
+    event_user(0)
+}
+
 surface_set_target(application_surface)
 camera_apply()
 
