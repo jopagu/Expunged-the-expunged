@@ -107,6 +107,8 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+
+
 if(cur_line >= ds_list_size(lines)){
     if(keyboard_check_pressed(vk_enter)){
 
@@ -186,6 +188,10 @@ if(blink){
     ds_list_add(input_part3, "_")
 
     ds_list_add(input_line, input_part3)
+}
+
+if(Player.dead){
+    instance_destroy()
 }
 #define Draw_0
 /*"/*'/**//* YYD ACTION

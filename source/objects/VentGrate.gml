@@ -22,9 +22,8 @@ if(distance_to_object(Player) <= 32){
         dir = direction_to_object(Player) + random_range(-15, 15)
         hspeed = lengthdir_x(3, dir)
         vspeed = lengthdir_y(3, dir)
-        if(name == ""){
-            destroy_vent_covers()
-        }
+        destroy_vent_covers(name)
+
     }
 }
 

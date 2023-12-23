@@ -1,15 +1,7 @@
-with(VentCoverH){
-    instance_destroy()
-}
-with(VentCoverV){
-    instance_destroy()
-}
-with(VentCoverDL){
-    instance_destroy()
-}
-with(VentCoverUR){
-    instance_destroy()
-}
-with(VentCoverDR){
-    instance_destroy()
+_n = argument0
+
+with(VentCoverParent){
+    if (name == other._n){
+        instance_destroy()
+    }
 }

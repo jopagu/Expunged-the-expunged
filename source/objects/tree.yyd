@@ -474,6 +474,7 @@
 	|OverheadLight
 	|CardReader
 	|Door
+	|VentCoverParent
 	|VentCoverH
 	|VentCoverV
 	|VentCoverDL
