@@ -4,6 +4,12 @@ with(VentCoverH){
 with(VentCoverV){
     instance_destroy()
 }
-with(VentCoverLD){
+with(VentCoverDL){
+    instance_destroy()
+}
+with(VentCoverUR){
+    instance_destroy()
+}
+with(VentCoverDR){
     instance_destroy()
 }

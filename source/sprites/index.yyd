@@ -384,7 +384,7 @@ spr173
 sprCrowbar
 sprVentCoverH
 sprVentCoverV
-sprVentCoverLD
+sprVentCoverDL
 sprVentGrate
 sprBed
 
@@ -404,3 +404,5 @@ sprRedLight
 sprStairPlatformSegment
 sprShelf
 sprLongShelf
+sprVentCoverUR
+sprVentCoverDR

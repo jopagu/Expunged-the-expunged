@@ -476,7 +476,9 @@
 	|Door
 	|VentCoverH
 	|VentCoverV
-	|VentCoverLD
+	|VentCoverDL
+	|VentCoverUR
+	|VentCoverDR
 	|VentGrate
 	|Bed
 	|Desk

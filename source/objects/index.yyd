@@ -461,7 +461,7 @@ Crowbar
 EquipmentManager
 VentCoverH
 VentCoverV
-VentCoverLD
+VentCoverDL
 VentGrate
 Bed
 SCP106Emerge
@@ -482,3 +482,5 @@ RedLight
 StairPlatformSegment
 Shelf
 LongShelf
+VentCoverUR
+VentCoverDR
