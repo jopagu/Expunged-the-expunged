@@ -45,8 +45,8 @@ if(darkness_level == 1){
         draw_set_alpha(0.03)
         draw_set_color(c_white)
         r = 20
-        xx = x
-        yy = y
+        xx = x - view_xview
+        yy = y - view_yview
         while(r > 0){
             draw_circle(xx, yy, r, false)
             r -= 1

@@ -482,6 +482,7 @@
 	|VentCoverUR
 	|VentCoverDR
 	|VentGrate
+	|NonSolidGrate
 	|Bed
 	|Desk
 	|SecurityGate
@@ -519,3 +520,4 @@
 	|SCP106
 	|106KillField
 	|SCP173Spawn
+	|Footsteps

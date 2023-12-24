@@ -4,6 +4,10 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if(global.flashlight){
+    instance_destroy()
+}
+
 t=0
 base_y = y
 #define Step_0
