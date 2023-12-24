@@ -505,6 +505,7 @@
 	|SCP113
 	|PlayerText
 	|RoomFrame
+	|ElevatorCutscene
 +Obstacles
 	|TurretBase
 	|TurretBarrel

@@ -24,6 +24,9 @@ applies_to=self
 global.clearance = clearance
 sound_play("sndItem")
 instance_destroy()
+with(instance_create(x, y, PlayerText)){
+    text = "Clearance upgraded to level " + string(other.clearance)
+}
 #define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1
