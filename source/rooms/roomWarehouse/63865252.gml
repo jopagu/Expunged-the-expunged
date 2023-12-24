@@ -1,5 +1,5 @@
 //gm82 fields begin
-roomTo=room1
+roomTo=room173
 warpid="vent"
-//gm82 fields end
 visible=false
+//gm82 fields end

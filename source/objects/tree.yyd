@@ -493,6 +493,9 @@
 	|RedLight
 	|Shelf
 	|LongShelf
+	|Elevator
+	|ElevatorCables
+	|ElevatorLight
 +Misc
 	|UpArrow
 	|Folder

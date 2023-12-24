@@ -417,6 +417,10 @@
 	|sprRedLight
 	|sprShelf
 	|sprLongShelf
+	|sprElevator
+	|sprElevatorMask
+	|sprElevatorCables
+	|sprElevatorLight
 +Misc
 	|sprUpArrow
 	|sprLanyard
