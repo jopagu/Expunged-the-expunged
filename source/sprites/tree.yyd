@@ -424,6 +424,7 @@
 	|sprElevatorCables
 	|sprElevatorLight
 	|sprExit
+	|sprComputer
 +Misc
 	|sprUpArrow
 	|sprLanyard
@@ -439,3 +440,7 @@
 	|spr173
 	|spr106Emerge
 	|spr106
++Security
+	|sprSecurity
+	|sprite420
+	|sprite419

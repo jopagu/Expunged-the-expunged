@@ -500,6 +500,7 @@
 	|ElevatorLight
 	|Exit
 	|StairsBroken
+	|Computer
 +Misc
 	|UpArrow
 	|Folder
