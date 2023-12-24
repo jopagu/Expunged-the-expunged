@@ -1,3 +1,4 @@
 //gm82 fields begin
-darkness_level=0.7
+clearance=1
+trigger=Trigger1
 //gm82 fields end

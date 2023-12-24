@@ -28,6 +28,9 @@ switch num{
     case "999":
         scp999()
         break
+    case "970":
+        scp970()
+        break
     default:
         line = ds_list_create()
         part = ds_list_create()

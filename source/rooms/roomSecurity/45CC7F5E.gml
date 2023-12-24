@@ -1,3 +1,4 @@
 //gm82 fields begin
-darkness_level=0.7
+BGM="SilentHeaven"
+loop=true
 //gm82 fields end

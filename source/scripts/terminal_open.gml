@@ -28,6 +28,8 @@ switch num{
     case "999":
         url_open("https://scp-wiki.wikidot.com/scp-999")
         break
+    case "970":
+        url_open("https://scp-wiki.wikidot.com/scp-970")
     default:
         line = ds_list_create()
         part = ds_list_create()

@@ -1,3 +1,3 @@
 //gm82 fields begin
-darkness_level=0.7
+length=144
 //gm82 fields end
