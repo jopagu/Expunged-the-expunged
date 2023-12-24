@@ -15,6 +15,7 @@ applies_to=self
 with(turret){
     x = other.x + 23
     y = other.y + 10
+    on = other.on
 }
 #define Trigger_Trap is Triggered
 /*"/*'/**//* YYD ACTION

@@ -31,7 +31,7 @@ if((abs(angle_difference(direction_to_object(Player), image_angle)) <= 20)  && d
         tracking = true
         alarm[0] = 3
     }
-}else if tracking{
+}else if (tracking && on){
     t = (image_angle - 180) mod 360
     tracking = false
 }
