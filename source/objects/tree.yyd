@@ -510,8 +510,13 @@
 	|PlayerText
 	|RoomFrame
 	|ElevatorCutscene
+	|ElevatorCutscene2
 	|CrowbarDestroy
 	|CrowbarDrop
+	|Dummy
+	|FinalCutscene
+	|Credits
+	|Melting
 +Obstacles
 	|TurretBase
 	|TurretBarrel
@@ -523,3 +528,4 @@
 	|106KillField
 	|SCP173Spawn
 	|Footsteps
+	|SCP087
