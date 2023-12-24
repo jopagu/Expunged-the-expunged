@@ -15,5 +15,7 @@ savedata("old_man_active", global.old_man_active)
 savedata("old_man_dead", global.old_man_dead)
 savedata("first_door", global.first_door)
 savedata("crowbar", global.crowbar)
+savedata("flashlight", global.flashlight)
+
 
 //add your custom save code here

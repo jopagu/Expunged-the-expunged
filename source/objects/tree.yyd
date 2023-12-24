@@ -466,6 +466,7 @@
 +Equipment
 	|EquipmentManager
 	|Flashlight
+	|FlashlightPickup
 	|Crowbar
 	|CrowbarPickup
 	|CrowbarSpawn
@@ -506,6 +507,8 @@
 	|PlayerText
 	|RoomFrame
 	|ElevatorCutscene
+	|CrowbarDestroy
+	|CrowbarDrop
 +Obstacles
 	|TurretBase
 	|TurretBarrel

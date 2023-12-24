@@ -15,8 +15,9 @@ applies_to=self
 */
 
 
-if(distance_to_object(Player) <= 1 && Player.image_alpha >= 0.7){
+if(distance_to_object(Player) <= 1 && Player.image_alpha >= 0.7 && !Player.dead){
     kill_player()
+    sound_play("sndNeckSnap")
 }
 
 b = collision_line(x, y, Player.x, Player.y, Block, true, true)

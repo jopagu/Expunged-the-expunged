@@ -61,6 +61,9 @@ if (global.onload_trigger) {
     with (all) event_perform(ev_trigger,tr_onload)
 }
 
-if(global.crowbar){
+if(global.crowbar && !global.flashlight){
     instance_create(0, 0, Crowbar)
+}
+if(global.flashlight){
+    instance_create(0, 0, Flashlight)
 }
