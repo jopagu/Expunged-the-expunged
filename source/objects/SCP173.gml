@@ -4,19 +4,26 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-
+name = ""
 sound = false
+seen = false
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
 applies_to=self
 */
-if(distance_to_object(Player) <= 1){
+
+
+if(distance_to_object(Player) <= 1 && Player.image_alpha >= 0.7){
     kill_player()
 }
 
-if(!collision_line(x, y, Player.x, Player.y, Block, true, true)){
+if(!collision_line(x, y, Player.x, Player.y, Block, true, true) && distance_to_object(Player) <= 320){
+    seen = true
+    with(SCP173Spawn){
+        seen = true
+    }
     if (Player.x <= x){
         ds = -1
     }else{

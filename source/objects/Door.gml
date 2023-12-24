@@ -9,6 +9,7 @@ arrow = noone
 fading = false
 roomTo = room
 warpid=""
+warpToPlayerstart = noone
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -58,9 +59,18 @@ if(fading){
                 }
 
             }
+            if (other.warpToPlayerstart) {
+                move_player(other.warpToPlayerstart.x+(17 * other.warpToPlayerstart.image_xscale),other.warpToPlayerstart.y+23,0)
+                image_xscale = other.warpToPlayerstart.image_xscale
+                if (global.clear_inputs_on_warp) input_clear()
+                image_alpha = 1
+                other.fading = false
+            }else{
+                warp_to(other.roomTo)
+                global.warp_id = other.warpid
+            }
 
-            warp_to(other.roomTo)
-            global.warp_id = other.warpid
+            other.image_index = 0
 
         }
     }
@@ -99,3 +109,4 @@ applies_to=self
 */
 //field roomTo: room
 //field warpid: string
+//field warpToPlayerstart: instance - (pick a PlayerStart)

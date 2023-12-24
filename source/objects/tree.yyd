@@ -497,6 +497,7 @@
 	|ElevatorCables
 	|ElevatorLight
 	|Exit
+	|StairsBroken
 +Misc
 	|UpArrow
 	|Folder
@@ -513,3 +514,4 @@
 	|SCP106Emerge
 	|SCP106
 	|106KillField
+	|SCP173Spawn

@@ -1,3 +1,4 @@
 //gm82 fields begin
-warpToPlayerstart=room173_B7DB27DD
+length=176
+on=true
 //gm82 fields end

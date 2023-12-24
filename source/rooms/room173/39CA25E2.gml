@@ -1,3 +1,3 @@
 //gm82 fields begin
-warpToPlayerstart=room173_B7DB27DD
+warpid="hd4"
 //gm82 fields end

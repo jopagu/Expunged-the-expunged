@@ -412,6 +412,7 @@
 	|sprPedestal
 	|sprBearMath
 	|sprStairs
+	|sprStairsBroken
 	|sprStairPlatform
 	|sprStairPlatformSegment
 	|sprRedLight
