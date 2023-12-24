@@ -17,7 +17,7 @@ applies_to=self
 */
 event_user(0)
 if(tracking && on){
-    alarm[0] = 4
+    alarm[0] = 3
 }
 #define Step_0
 /*"/*'/**//* YYD ACTION
@@ -29,7 +29,7 @@ if((abs(angle_difference(direction_to_object(Player), image_angle)) <= 20)  && d
     && !collision_line(x + lengthdir_x(30, image_angle), y + lengthdir_y(30, image_angle), Player.x, Player.y, Block, true, false)){
     if !tracking{
         tracking = true
-        alarm[0] = 7
+        alarm[0] = 3
     }
 }else if tracking{
     t = (image_angle - 180) mod 360
@@ -64,8 +64,8 @@ applies_to=self
 sound_play("sndGunshot")
 with(instance_create(x + lengthdir_x(30, image_angle), y + lengthdir_y(30, image_angle), TurretBullet)){
     image_angle = other.image_angle + random_range(-10, 10)
-    hspeed = lengthdir_x(10, image_angle)
-    vspeed = lengthdir_y(10, image_angle)
+    hspeed = lengthdir_x(15, image_angle)
+    vspeed = lengthdir_y(15, image_angle)
 }
 #define Trigger_Trap is Triggered
 /*"/*'/**//* YYD ACTION
