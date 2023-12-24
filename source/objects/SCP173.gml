@@ -19,7 +19,14 @@ if(distance_to_object(Player) <= 1 && Player.image_alpha >= 0.7){
     kill_player()
 }
 
-if(!collision_line(x, y, Player.x, Player.y, Block, true, true) && distance_to_object(Player) <= 320){
+b = collision_line(x, y, Player.x, Player.y, Block, true, true)
+p = false
+with(b){
+    if(object_index == Stairs){
+        other.p = true
+    }
+}
+if((!b || p) && distance_to_object(Player) <= 640){
     seen = true
     with(SCP173Spawn){
         seen = true
