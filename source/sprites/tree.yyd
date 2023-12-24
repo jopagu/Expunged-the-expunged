@@ -421,6 +421,7 @@
 	|sprElevatorMask
 	|sprElevatorCables
 	|sprElevatorLight
+	|sprExit
 +Misc
 	|sprUpArrow
 	|sprLanyard

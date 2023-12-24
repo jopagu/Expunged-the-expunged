@@ -72,6 +72,10 @@ with(ElevatorLight){
     event_user(0)
 }
 
+with(Exit){
+    event_user(0)
+}
+
 surface_set_target(application_surface)
 camera_apply()
 
