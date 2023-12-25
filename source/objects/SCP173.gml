@@ -13,7 +13,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-
+if(!inside_view()) exit
 
 if(distance_to_object(Player) <= 1 && Player.image_alpha >= 0.7 && !Player.dead){
     kill_player()
