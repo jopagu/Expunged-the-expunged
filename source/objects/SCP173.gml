@@ -27,7 +27,7 @@ with(b){
         other.p = true
     }
 }
-if((!b || p) && distance_to_object(Player) <= 640){
+if((!b || p) && distance_to_object(Player) <= 640 && abs(Player.y - y) <= 64){
     seen = true
     with(SCP173Spawn){
         seen = true
@@ -38,7 +38,7 @@ if((!b || p) && distance_to_object(Player) <= 640){
         ds = 1
     }
     if((ds == -1 && Player.image_xscale == -1) || (ds == 1 && Player.image_xscale == 1)){
-        hspeed = ds * 3
+        hspeed = ds * 3.5
         image_xscale = -ds
         if !sound sound_loop("sndStoneSlide2")
         sound = true
@@ -51,4 +51,15 @@ if((!b || p) && distance_to_object(Player) <= 640){
     hspeed = 0
     sound_stop("sndStoneSlide2")
     sound = false
+}
+#define Step_2
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+with(instance_place(x, y, Block)){
+    if (object_index != Stairs){
+        other.x += -other.hspeed
+    }
 }

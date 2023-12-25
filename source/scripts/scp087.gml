@@ -113,7 +113,7 @@ ds_list_add(to_destroy, part)
 ds_list_add(part, fntTerminal)
 ds_list_add(part, light_green)
 ds_list_add(part, 5)
-ds_list_add(part, "SCP-096 is an unlit platform")
+ds_list_add(part, "SCP-087 is an unlit platform")
 
 ds_list_add(line, part)
 ds_list_add(lines, line)
