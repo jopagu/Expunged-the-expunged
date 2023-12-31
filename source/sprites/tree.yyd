@@ -419,6 +419,7 @@
 	|sprStairPlatformSegment
 	|sprRedLight
 	|sprShelf
+	|sprOutShelf
 	|sprLongShelf
 	|sprElevator
 	|sprElevatorMask
