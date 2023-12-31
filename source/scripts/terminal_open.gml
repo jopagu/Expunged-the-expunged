@@ -1,5 +1,14 @@
 num = argument0
 
+if(string_length(num) == 2){
+    num = "0" + num
+}
+
+if(!ds_list_find_index(global.unlocked_scps, num)){
+    num = "-1"
+}
+
+
 switch num{
     case "173":
         url_open("https://scp-wiki.wikidot.com/scp-173")
@@ -13,16 +22,10 @@ switch num{
     case "033":
         url_open("https://scp-wiki.wikidot.com/scp-033")
         break
-    case "33":
-        url_open("https://scp-wiki.wikidot.com/scp-033")
-        break
     case "1313":
         url_open("https://scp-wiki.wikidot.com/scp-1313")
         break
     case "055":
-        url_open("https://scp-wiki.wikidot.com/scp-055")
-        break
-    case "55":
         url_open("https://scp-wiki.wikidot.com/scp-055")
         break
     case "999":
@@ -32,11 +35,7 @@ switch num{
         url_open("https://scp-wiki.wikidot.com/scp-970")
     case "096":
         url_open("https://scp-wiki.wikidot.com/scp-096")
-    case "96":
-        url_open("https://scp-wiki.wikidot.com/scp-096")
     case "087":
-        url_open("https://scp-wiki.wikidot.com/scp-087")
-    case "87":
         url_open("https://scp-wiki.wikidot.com/scp-087")
     default:
         line = ds_list_create()

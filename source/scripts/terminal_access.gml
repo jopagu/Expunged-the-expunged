@@ -1,5 +1,13 @@
 num = argument0
 
+if(string_length(num) == 2){
+    num = "0" + num
+}
+
+if(!ds_list_find_index(global.unlocked_scps, num)){
+    num = "-1"
+}
+
 switch num{
     case "173":
         scp173()
@@ -13,16 +21,10 @@ switch num{
     case "033":
         scp033()
         break
-    case "33":
-        scp033()
-        break
     case "1313":
         scp1313()
         break
     case "055":
-        scp055()
-        break
-    case "55":
         scp055()
         break
     case "999":
@@ -34,13 +36,7 @@ switch num{
     case "096":
         scp096()
         break
-    case "96":
-        scp096()
-        break
     case "087":
-        scp087()
-        break
-    case "87":
         scp087()
         break
     default:
