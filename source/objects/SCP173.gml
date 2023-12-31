@@ -63,3 +63,6 @@ with(instance_place(x, y, Block)){
         other.x += -other.hspeed
     }
 }
+with(instance_place(x, y, SecurityGate)){
+    other.x += -other.hspeed
+}
