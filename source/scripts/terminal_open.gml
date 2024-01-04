@@ -33,10 +33,19 @@ switch num{
         break
     case "970":
         url_open("https://scp-wiki.wikidot.com/scp-970")
+        break
     case "096":
         url_open("https://scp-wiki.wikidot.com/scp-096")
+        break
     case "087":
         url_open("https://scp-wiki.wikidot.com/scp-087")
+        break
+    case "939":
+        url_open("https://scp-wiki.wikidot.com/scp-939")
+        break
+    case "3125":
+        url_open("https://scp-wiki.wikidot.com/antimemetics-division-hub")
+        break
     default:
         line = ds_list_create()
         part = ds_list_create()
