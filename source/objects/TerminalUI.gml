@@ -67,11 +67,14 @@ if(cur_line < ds_list_size(lines)){
         _part = ds_list_find_value(_line, cur_part)
         _str = ds_list_find_value(_part, textidx)
         _spd = ds_list_find_value(_part, speedidx)
-
+        if (_spd == 5){
+            _spd = 3
+        }
         if(_spd != 0 && cur_char < string_length(_str)){
             cur_char += 1
             if (cur_char < string_length(_str)){
                 sound_play("sndType")
+
                 alarm[0] = _spd
             }
         }else{

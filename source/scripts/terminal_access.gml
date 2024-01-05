@@ -4,7 +4,7 @@ if(string_length(num) == 2){
     num = "0" + num
 }
 
-if(!ds_list_find_index(global.unlocked_scps, num)){
+if(ds_list_find_index(global.unlocked_scps, num) < 0){
     num = "-1"
 }
 
