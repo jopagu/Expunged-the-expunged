@@ -36,6 +36,7 @@ if(active) exit
 active = true
 cutscene = true
 frozen = true
+
 alarm[0] = 500
 alarm[1] = 25
 
