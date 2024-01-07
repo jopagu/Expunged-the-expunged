@@ -13,6 +13,7 @@ applies_to=self
 */
 with(Credits){
     vspeed = -1
+    visible = true
 }
 #define Alarm_1
 /*"/*'/**//* YYD ACTION
